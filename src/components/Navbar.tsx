@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const navLinks = ['Home', 'Menu', 'Reservations', 'Contact'];
+  const navLinks = ['Home', 'Menu', 'Reservations',https://e-commerce-sigma-beige-91.vercel.app/ 'Contact'];
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
