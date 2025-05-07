@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #b45309;
+  --primary-dark: #92400e;
+  --primary-light: #d97706;
+  --secondary: #1f2937;
+  --secondary-light: #374151;
+  --text-dark: #1f2937;
+  --text-light: #f9fafb;
+  --text-muted: #6b7280;
+  --background: #f9fafb;
+  --background-alt: #f3f4f6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-gray-800 bg-white font-sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif;
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 font-medium text-white transition-all duration-300 transform bg-amber-700 rounded-full hover:bg-amber-800 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 font-medium text-white transition-all duration-300 transform bg-transparent border border-white rounded-full hover:bg-white/10 hover:-translate-y-1 focus:outline-none;
+  }
+  
+  .section-title {
+    @apply mb-4 text-3xl font-bold md:text-4xl font-serif text-gray-800;
+  }
+  
+  .section-subtitle {
+    @apply mx-auto mb-8 text-gray-600 max-w-2xl;
+  }
+  
+  .nav-link {
+    @apply font-medium transition-colors duration-300 cursor-pointer;
+  }
+
+  .nav-link-light {
+    @apply text-white hover:text-amber-200;
+  }
+
+  .nav-link-dark {
+    @apply text-gray-800 hover:text-amber-700;
+  }
+  
+  .social-icon {
+    @apply w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-amber-700 transition-colors duration-300;
+  }
+  
+  .feature-icon {
+    @apply text-amber-500 text-2xl mr-3;
+  }
+  
+  .contact-item {
+    @apply flex items-start mb-4;
+  }
+  
+  .contact-icon {
+    @apply mt-1 mr-3 text-amber-500;
+  }
+  
+  .fade-in {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
